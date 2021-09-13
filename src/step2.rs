@@ -1,7 +1,10 @@
 use std::collections::HashMap;
 
+type Account = u16;
+type Balance = u32;
+
 pub struct BalancesModule {
-    balances: HashMap<u32, u32>
+    balances: HashMap<Account, Balance>
 }
 
 impl BalancesModule {
@@ -11,15 +14,15 @@ impl BalancesModule {
         }
     }
 
-    pub fn set_balance(&mut self, who: u32, amount: u32) {
+    pub fn set_balance(&mut self, who: Account, amount: Balance) {
         self.balances.insert(who, amount);
     }
 
-    pub fn balance(&self, who: u32) -> u32 {
+    pub fn balance(&self, who: Account) -> Balance {
         *self.balances.get(&who).unwrap_or(&0)
     }
 
-    pub fn transfer(&mut self, from: u32, to: u32, amount: u32) -> Result<(), &'static str> {
+    pub fn transfer(&mut self, from: Account, to: Account, amount: Balance) -> Result<(), &'static str> {
         let from_balance = self.balances.get(&from).ok_or("from user does not exist")?;
         let to_balance = self.balances.get(&to).unwrap_or(&0);
 
