@@ -56,6 +56,8 @@ sudo dnf update
 # Install packages
 sudo dnf install cmake pkgconfig rocksdb rocksdb-devel llvm git libcurl libcurl-devel curl-devel clang
 ```
+### Windows
+For Windows please follow the guide mentioned [here](https://www.rust-lang.org/tools/install)
 
 ## Rust Developer Environment
 
