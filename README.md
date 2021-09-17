@@ -90,10 +90,6 @@ cd substrate-node-template
 cargo build --release
 ```
 
-Substrate provides a browser based Playground as well, through which you can directly start hacking your code
-[![Try on playground](https://img.shields.io/badge/Playground-Node_Template-brightgreen?logo=Parity%20Substrate)](https://playground.substrate.dev/?deploy=node-template) [![Matrix](https://img.shields.io/matrix/substrate-technical:matrix.org)](https://matrix.to/#/#substrate-technical:matrix.org)
-
-
 ## Getting Started
 
 Follow the steps below to get started with the Node Template, or get it up and running right from
